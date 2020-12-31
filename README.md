@@ -31,7 +31,7 @@ http://scwripple.com/5-easy-steps-to-how-to-contribute-to-a-repo-on-github/
 Here is the link to the main repo, 
 
 https://github.com/InnovationGarageNITW/osf
-Make your First Contribution by adding your name in assets/js/main.js to the List of Contributors and get started with OSF. 
+Make your First Contribution by adding your name in assets/js/main.js to the List of Contributors and get started with OSF. (by solving this issue https://github.com/InnovationGarageNITW/osf/issues/2)
 P.S. You get some points for this too.😉
 
 You can find the link to other participating repositories there.
