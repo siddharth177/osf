@@ -19,7 +19,7 @@ If you are stuck at some particular place and need help, feel free to discuss wi
 
 ## What are the rules?
 Don't take up more than 1 issue at a time. Make sure you're done with 1 before you take up another.
-Only PRs that are created between 31st December 2020 5 PM and 27th January 2021 5 PM would be considered for the rankings of the leaderboard.
+Only PRs that are created between 31st December 2020 5 PM and 27th January 2021 8 PM would be considered for the rankings of the leaderboard.
 
 ## How to get started?
 Here is a small video that will give you a brief about the whole process of making a contribution.
