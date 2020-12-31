@@ -39,5 +39,6 @@ const contributors = [
     'ksh168',
     'ghanender-chauhan',
     'saitejach127',
+    'sahil-ramagiri',
     'smartankur'
 ];
