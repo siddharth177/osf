@@ -32,6 +32,8 @@ const repos = [
     },
 
 ];
-const contributors = [
 
+const contributors = [
+    'harry-dev98',
+    'raba-ajeet',
 ];

@@ -14,10 +14,71 @@
     <title>OSF</title>
 </head>
 <body>
-    <h1>
-       
-    contributors profiles
-     
-    </h1> 
+    <div class="container">
+        <div class="col-12 col-md-12 col-lg-11 order-md-2">
+            <!--begin::List Widget 2-->
+            <div class="card card-custom card-stretch card-shadowless bg-gray-100 gutter-b">
+                <!--begin::Header-->
+                <div class="card-header border-0 pt-6">
+                    <h3 class="card-title align-items-start flex-column">
+                        <span class="card-label font-weight-bolder font-size-h4 text-dark-75">Contributors</span>
+                    </h3>
+                </div>
+                <!--end::Header-->
+                <!--begin::Body-->
+                <div id="contributors" class="card-body pt-7 row">
+                    <!--begin::Item-->
+                    
+                    <!--end::Item-->
+                </div>
+                <!--end::Body-->
+            </div>
+            <!--end::List Widget 2-->
+        </div>
+    </div>
 </body>
+<script>
+    Promise.all(contributors.map((uname) => {
+        return fetch(`https://api.github.com/users/${uname}`)
+        .then((response)=>response.json())
+        .then((json)=>json)
+        .catch((error)=>{})
+    }))
+    .then((result)=>{
+        let innerHTML = "";
+        result.map((user)=>{
+            innerHTML += `<div class="d-flex align-items-center mb-6">
+                        <!--begin::Symbol-->
+                        <div class="symbol symbol-35 flex-shrink-0 mr-3">
+                            <img alt="Pic" class="rounded img-thumbnail avtar m-4" src="${user.avatar_url}">
+                        </div>
+                        <!--end::Symbol-->
+                        <!--begin::Content-->
+                        <div class="row">
+                            <!--begin::Text-->
+                            <div class="d-flex flex-column pr-5 flex-grow-1">
+                                <span class="text-muted font-weight-bold">${user.name}</span>
+                                <a href="${user.html_url}" class="text-dark text-hover-primary mb-1 font-weight-bolder font-size-lg">@${user.login}</a>
+                            </div>
+                            <!--begin::Label-->
+                            <span class="text-dark-50 font-weight-bold font-size-lg py-2">${user.bio||"No bio available."}</span>
+                            <!--end::Label-->
+                        </div>
+                        <!--end::Content-->
+                    </div>`
+        });
+        return innerHTML;
+    })
+    .then((innerHTML)=>{
+        console.log(innerHTML);
+        document.getElementById('contributors').innerHTML = innerHTML;
+    });
+
+</script>
+<style>
+    .avtar{
+        height: 100px;
+        width: 100px;
+    }
+</style>
 </html>
