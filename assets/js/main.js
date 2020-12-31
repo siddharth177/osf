@@ -36,7 +36,9 @@ const repos = [
 const contributors = [
     'harry-dev98',
     'raba-ajeet',
+    'ksh168',
     'ghanender-chauhan',
     'saitejach127',
-    'sahil-ramagiri'
+    'sahil-ramagiri',
+    'smartankur'
 ];
