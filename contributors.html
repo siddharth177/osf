@@ -57,7 +57,7 @@
                         <div class="row">
                             <!--begin::Text-->
                             <div class="d-flex flex-column pr-5 flex-grow-1">
-                                <span class="text-muted font-weight-bold">${user.name}</span>
+                                <span class="text-muted font-weight-bold">${user.name||user.login}</span>
                                 <a href="${user.html_url}" class="text-dark text-hover-primary mb-1 font-weight-bolder font-size-lg">@${user.login}</a>
                             </div>
                             <!--begin::Label-->
